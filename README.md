@@ -8,12 +8,15 @@ A ia product api tem como objetivo controlar o fluxo de dados de um sistema com 
 * Node
 
 ### Como utilizar (how to)
-`npm run dev`
+```
+npm run dev
+``` 
 obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão
 
 ### Models de request para os produtos:
 utilize a api desenvolvida com node.js para realizar as requisições (ia-product-api) o link do repositorio se encontra na seção 'Links'
 _recomendação utilizar o Insomnia (link para download na seção de link) para realizar as requisições [post, put, delete e get]:_
+
 _request example json_
 ```
 {
