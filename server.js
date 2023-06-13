@@ -10,13 +10,20 @@ app.use(cors());
 
 //Iniciando o DB
 
+const DB_USER = 'perseul'
+const DB_PASSWORD = encodeURIComponent('dQmJAkc4H5tIRfOL')
+
 mongoose.connect(
-    "mongodb+srv://perseul:dQmJAkc4H5tIRfOL@nodeapi.vgc5rva.mongodb.net/?retryWrites=true&w=majority",
+    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@nodeapi.vgc5rva.mongodb.net/?retryWrites=true&w=majority`,
     {useNewUrlParser: true}
-    );
-requireDir("./src/models");
+    )
+    .then(() => {
+        console.log('Conectamos ao MongoDB!')
 
-//Rotas
-app.use('/api',require("./src/routes"));
+        requireDir("./src/models")
 
-app.listen(3001);
+        app.use('/api',require("./src/routes"))
+
+        app.listen(3001)
+    })
+    .catch((err) => console.log(err))
