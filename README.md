@@ -40,6 +40,9 @@ GET: http://localhost:3001/api/products (para listar todos produtos existentes n
 
 DELETE: http://localhost:3001/api/products/{id} (inserir id do produto a ser deletado)
 
+_exemplo de request no Insomnia, no caso utilizei o seguinte url: http://localhost:3001/api/products porém voce também pode utilizar o seu endereço de ip:3001 exemplo: http://192.168.1.34:3001/api/products ({seu_ip}:3001/api/products)_
+![Captura de tela_2023-06-13_11-58-40](https://github.com/perseul/node-api/assets/53841377/f05f71fc-9473-49df-bf20-97dc223e0906)
+
 ### Links
 * [akaitem-frontend:](https://github.com/perseul/akaitem)
 * [Download Insomnia rest](https://insomnia.rest/download)
