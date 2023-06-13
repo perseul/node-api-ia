@@ -9,8 +9,9 @@ app.use(express.json());
 app.use(cors());
 
 //Iniciando o DB
+
 mongoose.connect(
-    "mongodb://localhost:27017/nodeapi",
+    "mongodb+srv://perseul:dQmJAkc4H5tIRfOL@nodeapi.vgc5rva.mongodb.net/?retryWrites=true&w=majority",
     {useNewUrlParser: true}
     );
 requireDir("./src/models");

@@ -8,25 +8,38 @@ A ia product api tem como objetivo controlar o fluxo de dados de um sistema com 
 * Node
 
 ### Como utilizar (how to)
+* _É necessario ter o Node.js instalado em sua maquina para executar os comandos npm no seu console (cmd)_ 
+
+_digite o seguinte comando para instalar as dependecias do projeto (esse comando irá criar a pasta: node_modules no seu projeto, *obs utilizar o comando --force para não ter problemas com as dependencias, pode forçar que o aplicativo irá instalar corretamente):_
+```
+npm install --force
+```
+_com a pasta node_modules em seu projeto digite o seguinte comando para iniciar sua api em um servidor local que escuta a porta 3001 (http://localhost:3001/api/)_
 ```
 npm run dev
 ``` 
-obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão
+obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo server.js, no método mongoose.connect('user:password@banco').
+eu ja criei o banco de dados, então pode iniciar a aplicação com npm run dev e a api já estará pronta para receber os requests do Insomnia.
 
 ### Models de request para os produtos:
 utilize a api desenvolvida com node.js para realizar as requisições (ia-product-api) o link do repositorio se encontra na seção 'Links'
 _recomendação utilizar o Insomnia (link para download na seção de link) para realizar as requisições [post, put, delete e get]:_
 
 _request example json_
+POST:http://localhost:3001/api/products (URI DE REQUEST)
 ```
 {
-  "title":"playstation 5",
-  "description":"playstation 5",
-  "avatar":"https://images.kabum.com.br/produtos/fotos/sync_mirakl/181395/Console-Playstation-5-825GB-Leitor-Digital-PS5-_1658863170_g.jpg",
-  "value":"50000",
-  "url":""
+  "title":"playstation 5 teste",
+	"description":"playstation 5",				 
+  "avatar":"https://images.kabum.com.br/produtos/fotos/sync_mirakl/181395/          Console-Playstation-5-825GB-Leitor-Digital-PS5-_1658863170_g.jpg",
+	"value":"50000",  
+	"url":"https://pt.wikipedia.org/wiki/PlayStation_5"
 }
 ```
+GET: http://localhost:3001/api/products (para listar todos produtos existentes no banco)
+
+DELETE: http://localhost:3001/api/products/{id} (inserir id do produto a ser deletado)
+
 ### Links
 * [akaitem-frontend:](https://github.com/perseul/akaitem)
 * [Download Insomnia rest](https://insomnia.rest/download)
