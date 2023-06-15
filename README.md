@@ -46,7 +46,6 @@ _exemplo de request no Insomnia, no caso utilizei o seguinte url: http://localho
 ### Links
 * [akaitem-frontend:](https://github.com/perseul/akaitem)
 * [Download Insomnia rest](https://insomnia.rest/download)
-* [Download MongoDb](https://www.mongodb.com/try/download/community)
-* [Como instalar e configurar o MongoDB](https://www.youtube.com/watch?v=skK5xj-CK-Q)
+* [Wiki do projeto (How to: MongoDB, Insomnia, Node ]([https://www.mongodb.com/try/download/community](https://github.com/perseul/node-api/wiki)https://github.com/perseul/node-api/wiki)
 
 ----------------
