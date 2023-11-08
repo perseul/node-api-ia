@@ -19,7 +19,7 @@ _com a pasta node_modules em seu projeto digite o seguinte comando para iniciar 
 npm run dev
 ``` 
 obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo server.js, no método mongoose.connect('user:password@banco').
-eu ja criei o banco de dados, então pode iniciar a aplicação com npm run dev e a api já estará pronta para receber os requests do Insomnia.
+eu ja criei o banco de dados, então pode iniciar a aplicação com npm run dev e a api já estará pronta para receber os requests do Insomnia. (cluster online atualmente pode usar o meu, liberei para ser acessado de qualquer IP)
 
 ### Models de request para os produtos:
 utilize a api desenvolvida com node.js para realizar as requisições (ia-product-api) o link do repositorio se encontra na seção 'Links'
