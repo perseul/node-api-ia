@@ -56,6 +56,4 @@ const pedidosSchema = new mongoose.Schema ({
 });
 
 
-mongoose.model("pedidos",pedidosSchema);
-
-//teste
+module.exports = mongoose.model('Pedido', pedidosSchema);

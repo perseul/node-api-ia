@@ -3,13 +3,17 @@ const cors = require('cors');
 const mongoose = require("mongoose");
 const requireDir = require("require-dir");
 
+const http = require('http');
+
+const swaggerUi = require('swagger-ui-express');
+const swaggerFile = require('./swagger_output.json');
+
 //Iniciando o app
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 //Iniciando o DB
-
 const DB_USER = 'perseul'
 const DB_PASSWORD = encodeURIComponent('dQmJAkc4H5tIRfOL')
 
@@ -24,6 +28,9 @@ mongoose.connect(
 
         app.use('/api',require("./src/routes"))
 
-        app.listen(3001)
+        http.createServer(app).listen(3001)
+
     })
     .catch((err) => console.log(err))
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))

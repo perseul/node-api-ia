@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const pedidos = mongoose.model("pedidos");
+const pedidos = require('../models/pedidos')
+
+//const pedidos = mongoose.model("pedidos");
 
 module.exports = {
     async store(req, res) {
