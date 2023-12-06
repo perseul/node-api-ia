@@ -27,7 +27,7 @@ const productsSchema = new mongoose.Schema({
         default: Date.now
     }  
 });
-
+    
 productsSchema.plugin(mongoosePaginate);
 
 module.exports = mongoose.model('Product', productsSchema)

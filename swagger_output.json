@@ -42,33 +42,43 @@
         "parameters": [
           {
             "name": "title",
-            "in": "path",
+            "in": "title",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "description",
-            "in": "path",
+            "in": "description",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "avatar",
-            "in": "path",
+            "in": "avatar",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           },
           {
             "name": "value",
-            "in": "path",
+            "in": "value",
             "required": true,
-            "type": "number"
+            "schema": {
+              "type": "number"
+            }
           },
           {
             "name": "url",
-            "in": "path",
+            "in": "url",
             "required": true,
-            "type": "string"
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

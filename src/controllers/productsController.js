@@ -2,8 +2,6 @@ const mongoose = require("mongoose");
 
 const Products = require('../models/products')
 
-//const Products = mongoose.model("products");
-
 module.exports = {
     async index(req, res){
         const { page = 1 } = req.query;
