@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "NODE_ENV=TEST mocha --timeout 2000",
     "dev": "nodemon server.js",
     "swagger-autogen": "node swagger.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Perseul Yerevan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "mocha": "^10.2.0",
     "mongoose": "^7.2.4",
     "mongoose-paginate": "^5.0.3",
     "require-dir": "^1.2.0",
