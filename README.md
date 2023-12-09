@@ -22,7 +22,8 @@ _Para executar o arquivo de testes, primeiramente tenha o server já iniciado, p
 ```
 npx mocha ./httpTest
 ```
-![tests](https://github.com/perseul/node-api/assets/53841377/21ba7a31-9743-4e6e-b280-1ccd1210853c)
+![tests](https://github.com/perseul/node-api/assets/53841377/9e9c9930-d1cb-4315-af57-7f55e1969068)
+
 
 obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo server.js, no método mongoose.connect('user:password@banco').
 eu ja criei o banco de dados, então pode iniciar a aplicação com npm run dev e a api já estará pronta para receber os requests do Insomnia. (cluster online atualmente pode usar o meu, liberei para ser acessado de qualquer IP)
