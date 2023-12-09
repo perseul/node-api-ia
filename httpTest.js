@@ -6,7 +6,8 @@ chai.use(chaiHttp);
 
 describe('HTTP gorest post', function() {
 
-    it('POST', async function() {
+    //Testing products requests
+    it('POST products', async function() {
         let res = await chai.request('http://localhost:3001/api')
         .post('/products')
         .send({ "title":"playstation 5 teste",
@@ -21,8 +22,33 @@ describe('HTTP gorest post', function() {
         expect(res).to.have.status(200);
     });
 
-    it('Get async', async function(){
+    it('GET products', async function(){
         let res = await chai.request("http://localhost:3001/api")
         .get("/products")
+
+        expect(res).to.have.status(200);
+    });
+
+    //Testing pedidos requests
+    it('POST pedidos', async function(){
+        let res = await chai.request('http://localhost:3001/api')
+        .post('/pedidos')
+        .send({ "id":"15hjk", 
+                "adress_line_1": "example",
+                "admin_area_1": "example2",
+                "admin_area_2": "example",
+                "country_code": "5",
+                "postal_code": "4",
+                "given_name": "example",
+                "surname": "example",
+                "email_adress": "example@address.com",
+                "payer_id": "5",
+                "phone_number": "5",
+                "currency_code": "5",
+                "value": "1000"})
+        .set('Content-Type', 'application/json')
+        .set('Accept', 'application/json')
+
+        expect(res).to.have.status(200); 
     });
 })
