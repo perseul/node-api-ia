@@ -4,7 +4,7 @@ let {expect, assert} = require('chai');
 let chaiHttp = require('chai-http');
 chai.use(chaiHttp);
 
-describe('HTTP gorest post', function() {
+describe('HTTP gorest', function() {
 
     //Testing products requests
     it('POST products', async function() {
