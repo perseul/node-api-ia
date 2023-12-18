@@ -20,9 +20,9 @@ npm run dev
 ```
 _Para executar o arquivo de testes, primeiramente tenha o server já iniciado, para se certificar no console exibira uma mensagem "Conectado ao MongoDB", logo após inicia um novo terminal e execute o comando o seguinte comando para iniciar os testes com o mocha:_
 ```
-npx mocha ./httpTest
+npx mocha ./tests/httpTest.js
 ```
-![tests](https://github.com/perseul/node-api/assets/53841377/9e9c9930-d1cb-4315-af57-7f55e1969068)
+![tests](https://github.com/perseul/node-api/assets/53841377/6dae8e0a-9552-4576-ae62-2aa4c8d41c72)
 
 
 obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo server.js, no método mongoose.connect('user:password@banco').
