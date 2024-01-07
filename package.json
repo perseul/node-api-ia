@@ -6,7 +6,7 @@
   "scripts": {
     "test": "NODE_ENV=TEST mocha --timeout 2000",
     "dev": "nodemon server.js",
-    "swagger-autogen": "node swagger.js"
+    "swagger": "node swagger.js"
   },
   "keywords": [],
   "author": "Perseul Yerevan",

@@ -17,6 +17,8 @@ app.use(cors());
 const DB_USER = 'perseul'
 const DB_PASSWORD = encodeURIComponent('dQmJAkc4H5tIRfOL')
 
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
 mongoose.connect(
     `mongodb+srv://${DB_USER}:${DB_PASSWORD}@nodeapi.vgc5rva.mongodb.net/?retryWrites=true&w=majority`,
     {useNewUrlParser: true}
@@ -32,5 +34,3 @@ mongoose.connect(
 
     })
     .catch((err) => console.log(err))
-
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
