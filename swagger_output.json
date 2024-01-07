@@ -1,9 +1,12 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "1.0.0",
     "title": "REST API",
-    "description": ""
+    "description": "Essa api tem como objetivo manipulação de produtos e pedidos",
+    "contact": {
+      "email": "perseulmeira@icloud.com"
+    },
+    "version": "1.0.0"
   },
   "servers": [
     {
@@ -12,18 +15,68 @@
   ],
   "paths": {
     "/pedidos": {
-      "post": {
-        "description": "",
+       "post": {
+        "description": "Endpoint para cadastrar pedidos",
         "responses": {
-          "200": {
-            "description": "OK"
+        "200": {
+          "description": "OK"
+        }
+      },
+      "requestBody": {
+        "content": {
+          "application/json":{
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id":{
+                  "example": "example_id"
+                },
+                "adress_line_1":{
+                  "example": "example"
+                },
+                "admin_area_1": {
+                  "example": "example"
+                },
+                "admin_area_2":{
+                  "example": "example"
+                },
+                "country_code":{
+                  "example": "example"
+                },
+                "postal_code":{
+                  "example": "example"
+                },
+                "given_name":{
+                  "example": "example"
+                },
+                "surname":{
+                  "example": "example"
+                },
+                "email_adress":{
+                  "example": "example"
+                },
+                "payer_id":{
+                  "example": "example"
+                },
+                "phone_number":{
+                  "example": "000000000"
+                },
+                "currency_code":{
+                  "example": "5"
+                },
+                "value":{
+                  "example": "10000"
+                }
+              }
+            }
           }
         }
       }
+    }
     },
     "/products": {
       "get": {
-        "description": "",
+        "description": "Obter a lista com os produtos",
         "parameters": [
           {
             "name": "page",
@@ -73,41 +126,10 @@
         }
       }
     }
-  },
-  "components": {
-    "schemas": {
-      "someBody": {
-        "type":"object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "example": "playstation 5 teste"
-          },
-          "description":{
-            "type": "string",
-            "example": "playstation 5"
-          },
-          "avatar": {
-            "type": "string",
-            "example":"https://images.kabum.com.br/produtos/fotos/sync_mirakl/181395/Console-Playstation-5-825GB-Leitor-Digital-PS5-_1658863170_g.jpg"
-          },
-          "value":{
-            "type":"number",
-            "example": "50000"
-          }
-        },
-        "required": [
-          "title",
-          "description",
-          "avatar",
-          "value"
-          ]
-        }
-      }
-    },
+  },  
     "/products/{id}": {
       "get": {
-        "description": "",
+        "description": "Obter informações de um produto a partir de seu ID",
         "parameters": [
           {
             "name": "id",
@@ -126,6 +148,16 @@
       },
       "put": {
         "description": "Endpoint para atualizar os produtos",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
         "200": {
           "description": "OK"
@@ -137,9 +169,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "id":{
-                  "example": "id do produto a ser alterado"
-                },
                 "title": {
                   "example": "playstation 5 teste"
                 },
@@ -160,10 +189,9 @@
           }
         }
       }
-    }
       },
       "delete": {
-        "description": "",
+        "description": "Deletar um produto a partir de seu ID",
         "parameters": [
           {
             "name": "id",
@@ -182,3 +210,4 @@
       }
     }
   }
+}
