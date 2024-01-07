@@ -10,9 +10,9 @@ A ia product api tem como objetivo controlar o fluxo de dados de um sistema com 
 ### Como utilizar (how to)
 * _É necessario ter o Node.js instalado em sua maquina para executar os comandos npm no seu console (cmd)_ 
 
-_digite o seguinte comando para instalar as dependecias do projeto (esse comando irá criar a pasta: node_modules no seu projeto, *obs utilizar o comando --force para não ter problemas com as dependencias, pode forçar que o aplicativo irá instalar corretamente):_
+_digite o seguinte comando para instalar as dependecias do projeto (esse comando irá criar a pasta: node_modules no seu projeto:_
 ```
-npm install --force
+npm install
 ```
 _com a pasta node_modules em seu projeto digite o seguinte comando para iniciar sua api em um servidor local que escuta a porta 3001 (http://localhost:3001/api/)_
 ```
