@@ -52,7 +52,8 @@ _exemplo de request no Insomnia, no caso utilizei o seguinte url: http://localho
 
 _Para acessar a documentação da API via interface Swagger, com o server iniciado digite o seguinte URL em seu navegador: http://localhost:3001/doc/_
 
-![Swagger](https://github.com/perseul/node-api/assets/53841377/1902ec44-d419-4dd7-9e31-3b81ffdbe695)
+![s](https://github.com/perseul/node-api/assets/53841377/0030abba-917e-47c2-a95e-5c295d72956c)
+
 
 ### Links
 * [akaitem-frontend:](https://github.com/perseul/akaitem)
