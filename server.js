@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const cors = require('cors');
 const mongoose = require("mongoose");
@@ -14,8 +15,8 @@ app.use(express.json());
 app.use(cors());
 
 //Iniciando o DB
-const DB_USER = 'perseul'
-const DB_PASSWORD = encodeURIComponent('dQmJAkc4H5tIRfOL')
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
@@ -34,3 +35,4 @@ mongoose.connect(
 
     })
     .catch((err) => console.log(err))
+    
