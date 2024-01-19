@@ -25,8 +25,12 @@ npx mocha ./tests/httpTest.js
 ![tests](https://github.com/perseul/node-api/assets/53841377/6dae8e0a-9552-4576-ae62-2aa4c8d41c72)
 
 
-obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo server.js, no método mongoose.connect('user:password@banco').
+obs: ter o server do mongo db devidamente configurado e no ar para realizar a conexão, o connection string que está sendo utilizado é um banco criado por mim, mas se voce quiser criar o seu pode mudar as credenciais do banco dentro do arquivo .env, no método mongoose.connect('user:password@banco').
 eu ja criei o banco de dados, então pode iniciar a aplicação com npm run dev e a api já estará pronta para receber os requests do Insomnia. (cluster online atualmente pode usar o meu, liberei para ser acessado de qualquer IP)
+_arquivo com as variaveis globais do projeto, onde pode alterar as credenciais do BD_
+
+![variaveis globais](https://github.com/perseul/node-api-ia/assets/53841377/64d9fb00-0894-43c6-b2fb-418cf30f6536)
+
 
 ### Models de request para os produtos:
 utilize a api desenvolvida com node.js para realizar as requisições (ia-product-api) o link do repositorio se encontra na seção 'Links'
