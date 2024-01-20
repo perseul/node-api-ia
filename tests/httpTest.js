@@ -22,11 +22,6 @@ describe('HTTP gorest', function() {
         expect(res).to.have.status(200);
     });
 
-    it('UPDATE products', async function() {
-        let res = await.request('http://localhost:3001/api')
-        .
-    })
-
     it('GET products', async function(){
         let res = await chai.request("http://localhost:3001/api")
         .get("/products")
