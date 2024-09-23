@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=TEST mocha --timeout 2000",
+    "test": "mocha ./tests/httpTest.js",
     "dev": "nodemon server.js",
     "swagger": "node swagger.js"
   },
